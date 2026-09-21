@@ -1,13 +1,10 @@
 /*console.log('hello', 'world');
 console.log('info message');
-
 let a = 5;
 let b = 6;
 let r = a == b; 
-
 console.log(r);
-console.log(a||b);
-*/
+console.log(a||b);*/
 let student = {
     name: "Eric",
     age: 50,
@@ -26,12 +23,11 @@ function calculateAve(grades) {
 let averageGrade = calculateAve(student.grades)
 
 console.log(averageGrade);
-
 console.log("Student: " + student.name);
 console.log("Average Grade : " +  averageGrade );
 console.log("Graduation status : 8" + student.isGraduated);
-
 console.log("all grades: ");
+
 for(let i=0; i < student.grades.length; i++){
     console.log("grade " + (i + 1) + " : "   + student.grades[i]);
 }
@@ -42,7 +38,6 @@ for (let i=0; i < student.grades.lemgth; i++){
         hasFailingGrade = true;
         break;
     }
-    
 }
 
 if (hasFailingGrade) {
@@ -50,3 +45,19 @@ if (hasFailingGrade) {
 } else{
     console.log("the dtudent all pass subjects.");
 }
+
+let index = 0;
+do {
+    console.log("grade " + (index +1 ) + ": " + student.grades[index]);
+    index++;
+}while(student.grades[index-1] < 90 && index < student.grades.length);
+
+let countabove80 = 0;
+let j = 0;
+while (j < student.grades.length) {
+    if(student.grades[j] > 80){
+        countabove80++;
+    }
+    j++;
+}
+console.log("Number of grades above 80: " + countabove80);
